@@ -1,0 +1,24 @@
+<h2>Lista de postagens</h2>
+
+
+
+{{#each postagens }}
+
+<div class="card">
+<div class="card-body">
+<h4>{{titulo}}</h4>
+<p{{descricao}}</p>
+<small>{{data}}</small>
+<small>{{categoria.nome}}</small>
+<a href="/admin/postagens/edit/{{_id}}" class="btn btn-success">Editar postagens</a>
+<a href="/admin/postagens/deletar/{{_id}}" class="btn btn-danger">Deletar postagem</a>
+</div>
+</div>
+
+
+{{else}}
+
+<p>Nenhuma categoria registrada</p>
+
+{{/each}}
+
